@@ -41,7 +41,7 @@ class Solution:
                 return tmp1
         else:
             if nums1[i] == tmp1:
-                return return (nums2[j - 1] + nums2[j]) / 2
+                return (nums2[j - 1] + nums2[j]) / 2
                 
 
 def main():
