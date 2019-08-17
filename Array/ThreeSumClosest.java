@@ -12,39 +12,40 @@ import java.util.Arrays;
 class ThreeSumClosest {
     public int threeSumClosest(int[] nums, int target) {
         int n = nums.length;
-        int rst=0;
-        if(n<=3){
-            for(int num:nums){
+        int rst = 0;
+        if (n <= 3) {
+            for (int num : nums) {
                 rst += num;
             }
             return rst;
         }
 
         Arrays.sort(nums);
-        rst = nums[0]+nums[1]+nums[n-1];
-        for (int i = 0; i < n-2; i++) {
+        rst = nums[0] + nums[1] + nums[n - 1];
+        for (int i = 0; i < n - 2; i++) {
             int j = i + 1;
             int k = n - 1;
-            while(j<k){
-                int sum=nums[i]+nums[j]+nums[k];
-                if(sum==target){
+            while (j < k) {
+                int sum = nums[i] + nums[j] + nums[k];
+                if (sum == target) {
                     return sum;
-                }else if(sum>target){
+                } else if (sum > target) {
                     k--;
-                }else{
+                } else {
                     j++;
                 }
-                if(Math.abs(sum-target)<Math.abs(rst-target)){
+                if (Math.abs(sum - target) < Math.abs(rst - target)) {
                     rst = sum;
                 }
             }
         }
         return rst;
     }
+
     public static void main(String[] args) {
         ThreeSumClosest solu = new ThreeSumClosest();
-        int[] nums = {-1, 2, 1, -4};
-        int target=1;
+        int[] nums = { -1, 2, 1, -4 };
+        int target = 1;
         int rst = solu.threeSumClosest(nums, target);
         System.out.println(rst);
     }
