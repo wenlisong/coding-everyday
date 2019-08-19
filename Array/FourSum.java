@@ -74,7 +74,7 @@ class FourSum {
         int[] nums = { 1, 0, -1, 0, -2, 2 };
         int target = 0;
         FourSum solu = new FourSum();
-        List rst = solu.fourSum(nums, target);
+        List<List<Integer>> rst = solu.fourSum(nums, target);
         System.out.println(rst);
     }
 }
