@@ -71,7 +71,9 @@ class Solution {
         String[][] tree = new String[height][width];
         for (String[] row : tree)
             Arrays.fill(row, "");
-        fill(root, tree, 0, 0, width);
+        
+        fill(root, tree, 0, 0, width - 1);
+
         List<List<String>> ans = new ArrayList<>();
         for (String[] row : tree) {
             ans.add(Arrays.asList(row));
