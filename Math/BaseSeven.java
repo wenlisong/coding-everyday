@@ -1,5 +1,3 @@
-import com.sun.org.apache.xpath.internal.operations.And;
-
 // 504. Base 7
 
 // Given an integer, return its base 7 string representation.
@@ -14,8 +12,29 @@ import com.sun.org.apache.xpath.internal.operations.And;
 // Note: The input will be in range of [-1e7, 1e7].
 
 class BaseSeven {
-    // 1 ms 34.2 MB
+    // 1 ms 34.5 MB
     public String convertToBase7(int num) {
+        if (num == 0) {
+            return "0";
+        }
+        boolean isNegative = false;
+        if (num < 0) {
+            isNegative = true;
+            num = -num;
+        }
+        String ans = "";
+        while (num > 0) {
+            ans = num % 7 + ans;
+            num /= 7;
+        }
+        if (isNegative) {
+            ans = "-" + ans;
+        }
+        return ans;
+    }
+
+    // 1 ms 34.2 MB
+    public String convertToBase72(int num) {
         if (num == 0) {
             return "0";
         }
@@ -34,24 +53,15 @@ class BaseSeven {
         }
         return sb.toString();
     }
-    // 1 ms	34.5 MB
-    public String convertToBase72(int num) {
-        if (num == 0) {
-            return "0";
-        }
-        boolean isNegative = false;
+
+    // recusion
+    public String convertToBase7(int num) {
         if (num < 0) {
-            isNegative = true;
-            num = -num;
+            return "-" + convertToBase7(-num);
+        } else if (num < 7) {
+            return Integer.toString(num);
+        } else {
+            return convertToBase7(num / 7) + Integer.toString(num % 7);
         }
-        String ans = "";
-        while (num > 0) {
-            ans = num % 7 + ans;
-            num /= 7;
-        }
-        if (isNegative) {
-            ans = "-" + ans;
-        }
-        return ans;
     }
 }
