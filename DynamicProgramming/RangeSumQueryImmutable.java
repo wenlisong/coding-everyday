@@ -20,7 +20,7 @@ class RangeSumQueryImmutable {
     private class NumArray1 {
         private int[] sum;
 
-        public NumArray(int[] nums) {
+        public NumArray1(int[] nums) {
             sum = nums;
         }
 
@@ -38,7 +38,7 @@ class RangeSumQueryImmutable {
     private class NumArray2 {
         private int[] sum;
 
-        public NumArray(int[] nums) {
+        public NumArray2(int[] nums) {
             sum = new int[nums.length + 1];
             for (int i = 0; i < nums.length; i++) {
                 sum[i + 1] = sum[i] + nums[i];
