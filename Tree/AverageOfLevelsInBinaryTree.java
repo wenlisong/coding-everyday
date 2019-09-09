@@ -20,18 +20,18 @@ import java.util.Queue;
 
 // The range of node's value is in the range of 32-bit signed integer.
 
-// Definition for a binary tree node.
-public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
 class AverageOfLevelsInBinaryTree {
+    // Definition for a binary tree node.
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+
     // DFS
     public List<Double> averageOfLevels(TreeNode root) {
         List<Double> sum = new ArrayList<>();

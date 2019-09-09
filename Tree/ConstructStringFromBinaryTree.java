@@ -34,18 +34,18 @@
 // Explanation: Almost the same as the first example, 
 // except we can't omit the first parenthesis pair to break the one-to-one mapping relationship between the input and the output.
 
-// Definition for a binary tree node.
-public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
 
 class ConstructStringFromBinaryTree {
+    // Definition for a binary tree node.
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
     // 6 ms	38.3 MB
     public String tree2str(TreeNode t) {
         if (t == null) {

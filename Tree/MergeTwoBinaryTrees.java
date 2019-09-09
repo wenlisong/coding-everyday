@@ -25,18 +25,18 @@
 
 // Note: The merging process must start from the root nodes of both trees.
 
-// Definition for a binary tree node.
-public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
 class MergeTwoBinaryTrees {
+    // Definition for a binary tree node.
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+    
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         // optional, faster speed. 0 ms	40.1 MB
         if (t1 == null && t2 == null) {

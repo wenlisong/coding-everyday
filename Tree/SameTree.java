@@ -28,18 +28,19 @@
 //         [1,2,1],   [1,1,2]
 // Output: false
 
-// Definition for a binary tree node.
-public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-// 0 ms	34.3 MB
 class Solution {
+    // Definition for a binary tree node.
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+
+    // 0 ms	34.3 MB
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if(p==null&&q==null){
             return true;

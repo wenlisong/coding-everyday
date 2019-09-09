@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 // 113. Path Sum II
 
@@ -23,18 +24,18 @@ import java.util.ArrayList;
 //    [5,8,4,5]
 // ]
 
-// Definition for a binary tree node.
-public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
 class Solution {
+    // Definition for a binary tree node.
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+
     public List<List<Integer>> pathSum(TreeNode root, int sum) {
         List<Integer> path = new ArrayList<>();
         List<List<Integer>> ans = new ArrayList<>();
