@@ -28,7 +28,7 @@
 //         [1,2,1],   [1,1,2]
 // Output: false
 
-class Solution {
+class SameTree {
     // Definition for a binary tree node.
     public class TreeNode {
         int val;

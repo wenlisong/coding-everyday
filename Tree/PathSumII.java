@@ -24,7 +24,7 @@ import java.util.List;
 //    [5,8,4,5]
 // ]
 
-class Solution {
+class PathSumII {
     // Definition for a binary tree node.
     public class TreeNode {
         int val;

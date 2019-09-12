@@ -30,7 +30,7 @@
 //  4   4
 // Return false.
 
-class Solution {
+class BalancedBinaryTree {
     public class TreeNode {
         int val;
         TreeNode left;
