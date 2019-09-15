@@ -1,4 +1,4 @@
-// 153. Find Minimum in Rotated Sorted Array
+// 154. Find Minimum in Rotated Sorted Array II
 
 // Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 
@@ -6,18 +6,23 @@
 
 // Find the minimum element.
 
-// You may assume no duplicate exists in the array.
+// The array may contain duplicates.
 
 // Example 1:
-// Input: [3,4,5,1,2] 
+
+// Input: [1,3,5]
 // Output: 1
-
 // Example 2:
-// Input: [4,5,6,7,0,1,2]
-// Output: 0
 
-class FindMinimumInRotatedSortedArray {
-    // O(logn) 0 ms 38.6 MB
+// Input: [2,2,2,0,1]
+// Output: 0
+// Note:
+
+// This is a follow up problem to Find Minimum in Rotated Sorted Array.
+// Would allow duplicates affect the run-time complexity? How and why?
+
+class FindMinimumInRotatedSortedArrayII {
+    // O(n) 0 ms 37.2 MB
     public int findMin(int[] nums) {
         return helper(nums, 0, nums.length - 1);
     }
