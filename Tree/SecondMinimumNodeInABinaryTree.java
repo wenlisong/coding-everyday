@@ -31,7 +31,7 @@ import java.util.Queue;
 // Output: -1
 // Explanation: The smallest value is 2, but there isn't any second smallest value.
 
-class Solution {
+class SecondMinimumNodeInABinaryTree {
     public class TreeNode {
         int val;
         TreeNode left;

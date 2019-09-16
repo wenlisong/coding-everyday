@@ -16,7 +16,7 @@ import java.util.*;
 // Output: [3,2,1]
 // Follow up: Recursive solution is trivial, could you do it iteratively?
 
-class Solution {
+class BinaryTreePostorderTraversal {
     public class TreeNode {
         int val;
         TreeNode left;

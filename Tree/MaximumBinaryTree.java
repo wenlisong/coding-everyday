@@ -19,7 +19,7 @@
 //        \
 //         1
 
-class Solution {
+class MaximumBinaryTree {
     public class TreeNode {
         int val;
         TreeNode left;

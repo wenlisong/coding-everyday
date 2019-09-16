@@ -36,7 +36,7 @@
 //   /
 //  1
 
-class Solution {
+class TrimABinarySearchTree {
     public class TreeNode {
         int val;
         TreeNode left;
