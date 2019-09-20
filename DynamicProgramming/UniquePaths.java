@@ -25,7 +25,7 @@
 // Input: m = 7, n = 3
 // Output: 28
 
-class Solution {
+class UniquePaths {
     // Recusion Time Limit Exceeded
     public int uniquePaths(int m, int n) {
         if (m <= 0 || n <= 0) {
@@ -60,16 +60,16 @@ class Solution {
 
     // DP 0 ms 33 MB
     public int uniquePaths3(int m, int n) {
-        int[][] mem = new int[m + 1][n + 1];
-        mem[1][1] = 1;
+        int[][] dp = new int[m + 1][n + 1];
+        dp[1][1] = 1;
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
                 if (i == 1 && j == 1) {
                     continue;
                 }
-                mem[i][j] = mem[i - 1][j] + mem[i][j - 1];
+                dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
             }
         }
-        return mem[m][n];
+        return dp[m][n];
     }
 }
