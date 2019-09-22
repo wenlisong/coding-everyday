@@ -19,9 +19,3 @@ class Solution:
             cur.next = pHead
             pHead = cur
         return cur
-
-def main():
-
-
-if __name__ == "__main__":
-    main()
