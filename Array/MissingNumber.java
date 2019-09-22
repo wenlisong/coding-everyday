@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 // 268. Missing Number
 
 // Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
@@ -14,7 +12,7 @@ import java.util.Arrays;
 // Output: 8
 // Note:
 // Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
-class Solution {
+class MissingNumber {
     // Sum Method 0 ms 39.2 MB
     public int missingNumber(int[] nums) {
         int sum = 0;
