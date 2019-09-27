@@ -9,17 +9,16 @@
 // ]
 // Output: 1->1->2->3->4->4->5->6
 
-// Definition for singly-linked list.
-public class ListNode {
-	int val;
-	ListNode next;
-
-	ListNode(int x) {
-		val = x;
-	}
-}
-
 class MergeKSortedLists {
+	public class ListNode {
+		int val;
+		ListNode next;
+
+		ListNode(int x) {
+			val = x;
+		}
+	}
+
 	public ListNode mergeKLists(ListNode[] lists) {
 		if (lists == null || lists.length == 0) {
 			return null;
@@ -45,17 +44,17 @@ class MergeKSortedLists {
 		while (node1 != null && node2 != null) {
 			if (node1.val <= node2.val) {
 				cur.next = node1;
-				node1=node1.next;
+				node1 = node1.next;
 			} else {
 				cur.next = node2;
-				node2=node2.next;
+				node2 = node2.next;
 			}
-			cur=cur.next;
+			cur = cur.next;
 		}
-		if(node1!=null){
-			cur.next=node1;
-		}else{
-			cur.next=node2;
+		if (node1 != null) {
+			cur.next = node1;
+		} else {
+			cur.next = node2;
 		}
 		return head.next;
 	}
