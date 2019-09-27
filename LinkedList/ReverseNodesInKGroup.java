@@ -14,17 +14,16 @@
 // Only constant extra memory is allowed.
 // You may not alter the values in the list's nodes, only nodes itself may be changed.
 
-//    Definition for singly-linked list.
-public class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
-
 class ReverseNodesInKGroup {
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
     public ListNode reverseKGroup(ListNode head, int k) {
         ListNode cur = head;
         int count = 0;
