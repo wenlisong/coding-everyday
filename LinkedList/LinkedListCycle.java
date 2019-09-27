@@ -26,19 +26,18 @@ import java.util.Set;
 // Follow up:
 // Can you solve it using O(1) (i.e. constant) memory?
 
-// Definition for singly-linked list.
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-}
-
 public class Solution {
-    // HashSet  4 ms 37.1 MB
+    class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
+
+    // HashSet 4 ms 37.1 MB
     public boolean hasCycle(ListNode head) {
         Set count = new HashSet<>();
         while (head != null) {
@@ -51,7 +50,7 @@ public class Solution {
         return false;
     }
 
-    // Two Pointers 0 ms    37.3 MB
+    // Two Pointers 0 ms 37.3 MB
     public boolean hasCycle2(ListNode head) {
         ListNode slow = head, fast = head;
 
