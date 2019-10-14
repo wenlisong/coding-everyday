@@ -36,6 +36,7 @@ class UniquePathsII {
             for (int j = 1; j < n + 1; j++) {
                 if (i == 1 && j == 1) {
                     dp[i][j] = 1 - obstacleGrid[i - 1][j - 1];
+                    continue;
                 }
                 if (obstacleGrid[i - 1][j - 1] == 1) {
                     dp[i][j] = 0;
